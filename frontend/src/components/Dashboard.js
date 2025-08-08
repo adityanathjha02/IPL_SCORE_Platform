@@ -22,7 +22,7 @@ const Dashboard = () => {
   const fetchMatches = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`${API_BASE_URL}/matches`);
+      const response = await axios.get(`${API_BASE_URL}/api/matches`); // Added /api
       setMatches(response.data);
       setError(null);
     } catch (err) {
